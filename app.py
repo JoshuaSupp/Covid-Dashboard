@@ -52,11 +52,11 @@ st.title('Covid-19 Visualization Dashboard')
 
 st.image(f"https://flagcdn.com/80x60/{country_code[country]}.png")
 
-
+col1,col2,col3 = st.columns(3)
 st.metric('Selected Country', country)
-st.metric('Yesterday Cases',yesterday_cases)
-st.metric('Yesterday Deaths',yesterday_deaths)
-st.metric('Yesterday Recoveries ', yesterday_recoveries)
+col1.metric('Yesterday Cases',yesterday_cases)
+col2.metric('Yesterday Deaths',yesterday_deaths)
+col3.metric('Yesterday Recoveries ', yesterday_recoveries)
 
 
 st.line_chart(daily_df)        #line chart for daily cases
@@ -78,41 +78,5 @@ st.image('https://cdn.the-scientist.com/assets/articleNo/69402/aImg/44174/corona
 
 
 
-#map
 
-# data = pd.DataFrame({
-#     'awesome cities' : ['Chicago', 'Minneapolis', 'Louisville', 'Topeka'],
-#     'lat' : [41.868171, 44.979840,  38.257972, 39.030575],
-#     'lon' : [-87.667458, -93.272474, -85.765187,  -95.702548]
-# })
-
-
-# midpoint = (np.average(data['lat']), np.average(data['lon']))
-
-# st.deck_gl_chart(
-#             viewport={
-#                 'latitude': midpoint[0],
-#                 'longitude':  midpoint[1],
-#                 'zoom': 4
-#             },
-#             layers=[{
-#                 'type': 'ScatterplotLayer',
-#                 'data': data,
-#                 'radiusScale': 250,
-#    'radiusMinPixels': 5,
-#                 'getFillColor': [248, 24, 148],
-#             }]
-#         )
-
-
-# data = pd.DataFrame({
-# 'awesome cities' : ['Chicago', 'Minneapolis', 'Louisville', 'Topeka'],
-# 'lat' : [41.868171, 44.979840, 38.257972, 39.030575],
-# 'lon' : [-87.667458, -93.272474, -85.765187, -95.702548]
-# })
-
-# st.map(data)
-
-# points=pd.DataFrame([[50,0.01],[51,0.1],[51.05,1.05]], columns = ["lat","lon"])
-# st.map(points)
 
