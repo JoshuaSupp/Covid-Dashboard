@@ -69,8 +69,8 @@ st.line_chart(daily_df)        #line chart for daily cases
 st.video('https://www.youtube.com/watch?v=d7riL6IXi5o')
 
 
-text_contents = '''This is some text'''
-st.download_button('Download some text', str(text_contents))
+text_contents = '''Hi Everyone'''
+st.download_button('Click Button To Download Text', str(text_contents))
 
 
 st.image('https://cdn.the-scientist.com/assets/articleNo/69402/aImg/44174/coronavirus-article-s.jpg')
