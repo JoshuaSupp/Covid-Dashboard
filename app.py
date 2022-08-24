@@ -52,8 +52,8 @@ st.title('Covid-19 Visualization Dashboard')
 
 st.image(f"https://flagcdn.com/80x60/{country_code[country]}.png")
 
-col1,col2,col3 = st.columns(3)
 st.metric('Selected Country', country)
+col1,col2,col3 = st.columns(3)
 col1.metric('Yesterday Cases',yesterday_cases)
 col2.metric('Yesterday Deaths',yesterday_deaths)
 col3.metric('Yesterday Recoveries ', yesterday_recoveries)
